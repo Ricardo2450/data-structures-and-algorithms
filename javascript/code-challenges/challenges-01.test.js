@@ -13,8 +13,8 @@ const addOne = (arr) => {
   let newArr = [];
   arr.forEach(item => {
     newArr.push(item + 1);
-  } )
-    return newArr;
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,8 +46,8 @@ const allUpperCase = (arr) => {
   // Solution code here...
   let newArr = [];
   arr.forEach(item => {
-    newArr.push(item.toUpperCase);
-  })
+    newArr.push(item.toUpperCase());
+  });
   return newArr;
 };
 
@@ -63,10 +63,19 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+  let newWord = word.toUpperCase();
+  newWord += '!';
+  return newWord;
 };
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArr = [];
+  words.forEach(item => {
+    newArr.push(
+      callback(item));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,10 +96,21 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  arr.forEach(num => {
+    arr.push(
+      callback(num));
+    arr.forEach(times => {
+      arr.push(
+        callback(times),
+    );
+  })
+});
+return addNumbers();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +133,14 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-};
+  availableItems.forEach(function(available) {
+    if (available = true) {
+      createList.push.availableItems
+    }
+    else
+    createList();
+}
+}
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -162,20 +189,20 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
     expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should add the number 8 to the array five times', () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
