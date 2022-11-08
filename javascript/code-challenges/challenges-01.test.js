@@ -101,17 +101,12 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  arr.forEach(num => {
-    arr.push(
-      callback(num));
-    arr.forEach(times => {
-      arr.push(
-        callback(times),
-    );
-  })
-});
-return addNumbers();
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -133,14 +128,22 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-  availableItems.forEach(function(available) {
-    if (available = true) {
-      createList.push.availableItems
+  let finalShoppingList = [];
+  availableItems.forEach(element => {
+    if (element.available === true) {
+      finalShoppingList.push(element.name);
     }
-    else
-    createList();
-}
-}
+  });
+  return finalShoppingList;
+};
+  // availableItems.forEach(function (available) {
+  //   if (available = true) {
+  //     createList.push.availableItems
+  //   }
+  //   else
+  //     createList();
+  // }
+// };
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
