@@ -10,7 +10,7 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  return arr.reduce((max, num) => num > max ? num : max,arr[0]);
+  return arr.reduce((max, num) => num > max ? num : max, arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,7 +20,8 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -125,10 +126,10 @@ const characters = [
 ];
 
 const getHouses = (arr) => {
-  let houses = [];
   // Solution code here...
-
-  return houses;
+  return arr.map(item => {
+    return item.house;
+  });
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -145,6 +146,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let kids = 0;
+
+  arr.forEach(person => {
+    if (person.name === character) {
+      Object.keys(person).forEach((key, idx) => {
+        if (key === 'children') {
+          let values = Object.values(person);
+          kids = values[idx].length;
+        }
+      });
+    }
+
+  });
+  return kids ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
