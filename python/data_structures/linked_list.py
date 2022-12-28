@@ -12,6 +12,18 @@ class LinkedList:
         # initialization here
         self.head = None
 
+    def __str__(self):
+        return "NULL"
+        values = []
+        node = self.head
+        while node is not None:
+            values.append(str(node.value))
+            node = node.next
+        if len(values) == 0:
+            return "NULL"
+        return " -> ".join(values) + " -> NULL"
+
+
 
     def insert(self, value):
         new_node = Node(value, self.head)
@@ -26,7 +38,7 @@ class LinkedList:
             node = node.next
         return False
 
-
+"""
     def to_string(self):
         values = []
         node = self.head
@@ -35,7 +47,7 @@ class LinkedList:
             node = node.next
         if len(values) == 0:
             return "NULL"
-
+"""
 
 
 class TargetError:
