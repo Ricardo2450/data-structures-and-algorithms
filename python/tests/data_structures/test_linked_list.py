@@ -27,7 +27,6 @@ def test_populated_head():
 #@pytest.mark.skip("TODO")
 def test_to_string_empty():
     linked_list = LinkedList()
-
     assert str(linked_list) == "NULL"
 
 
