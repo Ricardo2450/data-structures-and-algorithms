@@ -29,3 +29,5 @@ To run your tests
 [Array insert shift](python/docs/array_insert_shift/README.md)
 
 [Array Binary Search](python/docs/array_binary_search/README.md)
+
+[Linked list](python/docs/linked_list/README.md)

@@ -3,8 +3,10 @@ class Node:
         self.value = value
         self.next = next
 
+
     def __str__(self):
         return f"{ {self.value} }"
+
 
 class LinkedList:
     """
@@ -12,7 +14,9 @@ class LinkedList:
     """
     def __init__(self):
         # initialization here
+ linked-list-insertions
         self.linked_list = []
+
         self.head = None
 
     def __str__(self):
@@ -25,6 +29,7 @@ class LinkedList:
             return "NULL"
         return " -> ".join(values) + " -> NULL"
 
+
     def insert(self, value):
         new_node = Node(value, self.head)
         self.head = new_node
@@ -36,6 +41,7 @@ class LinkedList:
                 return True
             node = node.next
         return False
+
 
     def append(self, value):
         self.linked_list.append(Node(value))
@@ -50,6 +56,8 @@ class LinkedList:
             if node1.value == looking_for:
                 self.linked_list.append(Node(value2))
             self.linked_list.append(node1)
+
+
 
     def insert_after(self, looking_for, value2):
         old_list = []
