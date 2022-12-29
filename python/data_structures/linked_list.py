@@ -11,10 +11,11 @@ class LinkedList:
     """
    A data structure that contains nodes that links/points to the next node in the list.
     """
-
     def __init__(self):
         # initialization here
+
         self.linked_list = []
+
         self.head = None
         self.counter = 0
 
@@ -33,6 +34,7 @@ class LinkedList:
         self.head = new_node
         self.counter += 1
 
+
     def includes(self, value):
         node = self.head
         while node is not None:
@@ -42,30 +44,37 @@ class LinkedList:
             self.counter += 1
         return False
 
+
     def append(self, value):
         self.linked_list.append(Node(value))
         self.counter += 1
+
 
     def insert_before(self, looking_for, value2):
         old_list = []
         if len(self.linked_list) > 0:
             old_list = self.linked_list
             self.linked_list = []
+
         for node1 in old_list:
             if node1.value == looking_for:
                 self.linked_list.append(Node(value2))
             self.linked_list.append(node1)
+
             self.counter += 1
+
 
     def insert_after(self, looking_for, value2):
         old_list = []
         if len(self.linked_list) > 0:
             old_list = self.linked_list
             self.linked_list = []
+
         for node1 in old_list:
             self.linked_list.append(node1)
             if node1.value == looking_for:
                 self.linked_list.append(Node(value2))
+
                 self.counter += 1
 
     def kth_from_end(self, k):
@@ -78,6 +87,7 @@ class LinkedList:
             raise ValueError("Exception. Not in range")
         else:
             return new_list[-k - 1]
+
 
 
 

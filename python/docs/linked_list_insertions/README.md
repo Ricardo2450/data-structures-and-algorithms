@@ -1,3 +1,4 @@
+
 Documentation: Your README.md
 # k-th value
 <!-- Short summary or background information -->
@@ -17,3 +18,11 @@ Documentation: Your README.md
 <!-- Description of each method publicly available to your Linked List -->
 - kth_from_end will travel through link list and append node values to new list to figure out how long the list is.
 - it will go the end of new list and use the formula [- k - 1] to figure out the index of k.
+
+# Linked list insertions
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](./CC-6-whiteboard.png)
+
+
