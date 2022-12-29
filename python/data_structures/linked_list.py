@@ -81,10 +81,10 @@ class LinkedList:
         new_list = []
         current = self.head
         while current:
-            new_list.append(current.val)
+            new_list.append(current.value)
             current = current.next
         if k > len(new_list):
-            raise ValueError("Exception. Not in range")
+            raise TargetError
         else:
             return new_list[-k - 1]
 
