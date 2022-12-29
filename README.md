@@ -31,3 +31,5 @@ To run your tests
 [Array Binary Search](python/docs/array_binary_search/README.md)
 
 [Linked list](python/docs/linked_list/README.md)
+
+[Linked list kth](python/docs/linked_list_kth/README.md)
