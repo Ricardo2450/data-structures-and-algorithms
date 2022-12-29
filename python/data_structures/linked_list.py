@@ -78,18 +78,20 @@ class LinkedList:
                 self.counter += 1
 
     def kth_from_end(self, k):
-        new_list = []
+        if k < 0:
+            raise TargetError()
         current = self.head
-        while current:
-            new_list.append(current.value)
-            current = current.next
-        if k > len(new_list):
-            raise TargetError
-        else:
-            return new_list[-k - 1]
+        ll_list = []
+        try:
+            while current is not None:
+                ll_list.append(current.value)
+                current = current.next
+            return ll_list[-k - 1]
+        except Exception as e:
+            raise TargetError(e)
 
 
 
 
-class TargetError:
+class TargetError(Exception):
     pass

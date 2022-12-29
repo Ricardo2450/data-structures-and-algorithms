@@ -45,7 +45,7 @@ def test_kth_from_end_out_of_range():
         linked_list.kth_from_end(3)
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_kth_from_end_under_range():
     linked_list = LinkedList()
     values = ["apples", "bananas", "cucumbers"]
