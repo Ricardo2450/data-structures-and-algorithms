@@ -1,15 +1,17 @@
-from data_structures.binary_tree import BinaryTree
+from data_structures.binary_tree import BinaryTree, Node
 
 
 class BinarySearchTree(BinaryTree):
     """
     Put docstring here
     """
-
-    def __init__(self):
-        # initialization here
+    def add(self):
+        """
+        Following the rules of a BST, adds the value to the tree in the correct location
+        """
         pass
 
-    def some_method(self):
-        # method body here
+    def contains(self, value):
         pass
+
+
