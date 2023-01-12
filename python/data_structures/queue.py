@@ -14,7 +14,7 @@ class Queue:
   def __init__(self):
     self.front = None
     self.rear = None
-
+"""
   def enqueue(self, value):
   # checks to see if queue is empty
     if self.rear:
@@ -22,6 +22,18 @@ class Queue:
       self.rear = self.rear.next
       return
     self.rear = self.front = Node(value)
+"""
+
+  def enqueue(self, value):
+      new_node = Node(value)
+      if self.head is None:
+          self.head = new_node
+
+  if self.tail:
+      self.tail.next = new_node
+      self.tail = new_node
+  else:
+      self.tail = new_node
 
   def dequeue(self):
       if self.front is None:
