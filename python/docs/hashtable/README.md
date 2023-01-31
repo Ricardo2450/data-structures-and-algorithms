@@ -1,31 +1,23 @@
-# Challenge Summary
+# Hashtable
+<!-- Short summary or background information -->
+- A table that refers to a key and a value
 
-* Write a function called “first_repeated_word” that removes punctuation and finds the first word to occur more than once in a string.
+## Challenge
+<!-- Description of the challenge -->
+- Implement a Hashtable Class with the following methods:
+- set
+- get
+- has
+- keys
+- hash
 
-## Whiteboard Process
-- Will update later
-![]()
 
 ## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- Just use the code we did in class and work with that. Also made test outlined in the Code Challenge
 
-Approach
-*
-- first i have to separate each word into a string and remove convert it to lowercase
-- Probably create a hash table
-- go through every word in the list and if that word already exist in the hash table  then return that word
-- if not then just add that word to the hash table
-
-Efficiency
-* Time: O(n^2) - must iterate through list of words and then use “has” method to search for word in the Hash Table.
-* Space: O(n) - linear space due to the list of words that needs to be created.
-
-## Solution
-
-The solution code is located in the `code_challenges/hashtable_repeated_word.py` file.
-
-1. Within the virtual environment, install pytest via `pip install pytest`.
-2. From the Python folder, run tests via `pytest tests/code_challenges/test_hashtable_repeated_word.py`.
-
-## Contributors
-- Angelos
-- Aubrey
+## API
+<!-- Description of each method publicly available to your Linked List -->
+- Set will hash the key and set the key and value pair.
+- get will return the value associated with that key
+- has determines if the key exists in the table
